@@ -12,7 +12,7 @@ ISSN: 2070-1721                                             A. Matsumoto
                                                             
 
     Default Address Selection for Internet Protocol Version 6 (IPv6)
-
+                ietf-draft-buraglio-rfc6724-bis.txt
 Abstract
 
    This document describes two algorithms, one for source address
@@ -347,14 +347,14 @@ RFC 6724           Default Address Selection for IPv6     September 2012
       fec0::/10              1    11
       3ffe::/16              1    12
 
-   An implementation MAY automatically add additional site-specific rows
+   An implementation MUST automatically add additional site-specific rows
    to the default table based on its configured addresses, such as for
    Unique Local Addresses (ULAs) [RFC4193] and 6to4 [RFC3056] addresses,
    for instance (see Sections 10.6 and 10.7 for examples).  Any such
    rows automatically added by the implementation as a result of address
    acquisition MUST NOT override a row for the same prefix configured
    via other means.  That is, rows can be added but never updated
-   automatically.  An implementation SHOULD provide a means (the
+   automatically.  An implementation MUST provide a means (the
    Automatic Row Additions flag) for an administrator to disable
    automatic row additions.
 
@@ -363,7 +363,13 @@ RFC 6724           Default Address Selection for IPv6     September 2012
    addresses, 6to4 source addresses with 6to4 destination addresses,
    etc.  Another effect of the default policy table is to prefer
    communication using IPv6 addresses to communication using IPv4
-   addresses, if matching source addresses are available.
+   addresses, if matching source addresses are available. 
+   
+   This behavior is required for proper functioning of ULA addressing, 
+   this preserving the preference of IPv6 over legacy IPv4 in dual stacked environments
+   as detailed in draft-v6ops-ula. Additionally, requiring local site-specific addressing entry into all nodes 
+   preference list further scopes the network communication to local and remote per the respective
+   addressing blocks and creates a more consistent operational model and user experience. 
 
    Policy table entries for address prefixes that are not of global
    scope MAY be qualified with an optional zone index.  If so, a prefix
@@ -1541,7 +1547,7 @@ RFC 6724           Default Address Selection for IPv6     September 2012
                    C., and M. Azinger, "IANA-Reserved IPv4 Prefix for
                    Shared Address Space", BCP 153, RFC 6598, April 2012.
 
-
+    
 
 
 
@@ -1775,6 +1781,9 @@ Authors' Addresses
 
    EMail: tjc@ecs.soton.ac.uk
 
+   Nick Buraglio
+   Energy Sciences Network
+   Email: buraglio@es.net
 
 
 

@@ -366,10 +366,12 @@ RFC 6724           Default Address Selection for IPv6     September 2012
    addresses, if matching source addresses are available. 
    
    This behavior is required for proper functioning of ULA addressing, 
-   this preserving the preference of IPv6 over legacy IPv4 in dual stacked environments
-   as detailed in draft-v6ops-ula. Additionally, requiring local site-specific addressing entry into all nodes 
-   preference list further scopes the network communication to local and remote per the respective
-   addressing blocks and creates a more consistent operational model and user experience. 
+   thus preserving the preference of IPv6 over legacy IPv4 in dual stacked 
+   environments as detailed in draft-v6ops-ula. Additionally, requiring 
+   local site-specific addressing entry into all nodes preference list 
+   further scopes the network communication to local and remote per the 
+   respective addressing blocks and creates a more consistent operational 
+   model and user experience. 
 
    Policy table entries for address prefixes that are not of global
    scope MAY be qualified with an optional zone index.  If so, a prefix

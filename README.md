@@ -1,4 +1,4 @@
-# ietf-draft-buraglio-rfc6724-bis
+# ietf-draft-buraglio-rfc6724-update
 ## Proposed adjustments to RFC6724
 
 ### Adjust section 10.6, make it mandatory rather than optional 

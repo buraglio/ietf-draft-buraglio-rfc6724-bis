@@ -12,7 +12,7 @@ ISSN: 2070-1721                                             A. Matsumoto
                                                             
 
     Default Address Selection for Internet Protocol Version 6 (IPv6)
-                ietf-draft-buraglio-rfc6724-bis.txt
+                ietf-draft-buraglio-rfc6724-update.txt
 Abstract
 
    This document describes two algorithms, one for source address

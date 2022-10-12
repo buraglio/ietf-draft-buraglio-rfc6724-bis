@@ -239,6 +239,10 @@ networking transition planning, large scale network modeling, network lab enviro
 
 Now as to how to fix this without a global precedence for ULAs, set PIO with L=0 and A=0 (exactly as recommended in RFC 8028, but for other reasons). If a host sees such a PIO for a ULA prefix, it could serve as a signal that the prefix is to be given a suitable precedence, 
 even though it is not on-link and not used for SLAAC.
+
+Insert the /48 for any directly connected /64, utilize some RIO/PIO L=0/A=0 extension that adds additional non-direct /48.
+
+
 </section>
 
 <section title="IANA Considerations" toc="default">
